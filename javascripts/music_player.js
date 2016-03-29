@@ -134,7 +134,7 @@ var MusicController = {
 		};
 
 		o.playRateControl = function () {
-			var _numsSafari = [-8, -6, -4, -2, 1, 2, 4, 6, 8];
+			var _numsSafari = [-6, -4, -2, 1, 2, 4, 6];
 			var _numsOther = [1, 2, 4];
 
 			if (is.safari()) {
@@ -407,7 +407,9 @@ var LyricController = {
 		};
 
 		o.onTimeUpdate = function () {
-			o.findCurrentLrc();
+			if (!o.audioSource.paused) {
+				o.findCurrentLrc();
+			}
 		};
 
 		o.findCurrentLrc = function () {

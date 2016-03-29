@@ -67,8 +67,7 @@ noscript.tip-overlay {
     background-color: #aaa;
 }
 
-.wrapper::after {
-    content: "";
+.wrapper-background {
     position: absolute;
     top: 0;
     height: 120%;

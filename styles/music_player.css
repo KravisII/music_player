@@ -4,7 +4,7 @@ html {
 }
 body {
     background: #EFEFF4;
-    /*-webkit-backface-visibility: hidden;*/
+    -webkit-backface-visibility: hidden;
 }
 
 body.disableScroll {
@@ -85,8 +85,15 @@ noscript.tip-overlay {
     position: relative;
     z-index: 1;
     color: #ffffff;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.42); 
     height: 100%;
     background-color: rgba(0, 0, 0, 0.22);
@@ -253,7 +260,6 @@ noscript.tip-overlay {
 .slide-bar.seeking {
     text-shadow: 0 0 3px rgba(0, 0, 0, 0.80);
     color: #ffffff;
-    /*transition: color ease-in-out 0;*/
 }
 
 .slide-bar > span {
@@ -513,13 +519,24 @@ noscript.tip-overlay {
     }
 
     .lyric-controller {
-        flex-direction: row;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
+            -ms-flex-direction: row;
+                flex-direction: row;
     }
 
     .lyric-info {
         width: 140px;
-        flex: none;
-        flex-direction: column;
+        -webkit-box-flex: 0;
+        -webkit-flex: none;
+            -ms-flex: none;
+                flex: none;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+                flex-direction: column;
         background-color: rgba(0, 0, 0, 0.3);
     }
 
@@ -543,12 +560,17 @@ noscript.tip-overlay {
     }
 
     .lyric-controller-inner {
-        flex: 1;
-        flex-direction: column;
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+            -ms-flex: 1;
+                flex: 1;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
 }
-
-
 
 
 

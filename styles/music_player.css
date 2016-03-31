@@ -60,8 +60,6 @@ noscript.tip-overlay {
     width: 100%;
     max-width: 736px;
     min-width: 320px;
-    /* height: 736px; */
-     /*height: 480px; */
     height: 100%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
@@ -87,9 +85,11 @@ noscript.tip-overlay {
     position: relative;
     z-index: 1;
     color: #ffffff;
+    display: flex;
+    flex-direction: column;
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.42); 
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.42);
+    background-color: rgba(0, 0, 0, 0.22);
 }
 
 .lyric-controller-inner {
@@ -506,3 +506,66 @@ noscript.tip-overlay {
 .visible {
     visibility: visible;
 }
+
+@media screen and (min-width: 736px) {
+    .wrapper {
+        max-width: 100%;
+    }
+
+    .lyric-controller {
+        flex-direction: row;
+    }
+
+    .lyric-info {
+        width: 140px;
+        flex: none;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    .lyric-albumart {
+        height: 140px;
+        width: 140px;
+    }
+
+    .music-info {
+        display: block;
+        padding: 1em 0.8em;
+        box-sizing: border-box;
+    }
+
+    .music-info > h1 {
+        margin: 0.67em 0;
+    }
+
+    .music-info > h2 {
+        margin: 0.83em 0;
+    }
+
+    .lyric-controller-inner {
+        flex: 1;
+        flex-direction: column;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

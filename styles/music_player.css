@@ -2,6 +2,7 @@ html {
     /*Copy from [Hux 黄玄's Github](https://github.com/Huxpro/huxpro.github.io)*/
     font-family: -apple-system, -apple-system-font, "Helvetica Neue", "Arial", "PingFang SC", "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "Microsoft JhengHei", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "WenQuanYi Micro Hei", SimSun, sans-serif;
 }
+
 body {
     background: #EFEFF4;
     -webkit-backface-visibility: hidden;
@@ -37,7 +38,7 @@ noscript.tip-overlay {
     text-align: center;
     padding: 0 1em;
     -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
+    transform: translateY(-50%);
     position: relative;
     top: 30%;
 }
@@ -63,7 +64,7 @@ noscript.tip-overlay {
     height: 100%;
     min-height: 320px;
     -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     overflow: hidden;
     background-color: #aaa;
 }
@@ -99,9 +100,9 @@ noscript.tip-overlay {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    text-shadow: 0 0 5px rgba(0, 0, 0, 0.42); 
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.42);
     height: 100%;
     background-color: rgba(0, 0, 0, 0.22);
 }
@@ -115,8 +116,8 @@ noscript.tip-overlay {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     position: relative;
     z-index: 0;
 }
@@ -124,8 +125,8 @@ noscript.tip-overlay {
 .lyric-info {
     -webkit-box-flex: 0;
     -webkit-flex: none;
-        -ms-flex: none;
-            flex: none;
+    -ms-flex: none;
+    flex: none;
     position: relative;
     z-index: 100;
     display: -webkit-box;
@@ -139,8 +140,8 @@ noscript.tip-overlay {
     width: 60px;
     -webkit-box-flex: 0;
     -webkit-flex: none;
-        -ms-flex: none;
-            flex: none;
+    -ms-flex: none;
+    flex: none;
     margin-right: 1em;
     background: url("../others/Like%20I%20Used%20To.jpg") no-repeat 50% 50%;
     background-size: contain;
@@ -149,17 +150,17 @@ noscript.tip-overlay {
 .music-info {
     -webkit-box-flex: 1;
     -webkit-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    -ms-flex: 1;
+    flex: 1;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     -webkit-justify-content: space-around;
-            justify-content: space-around;
+    justify-content: space-around;
     -webkit-flex-flow: column;
-        -ms-flex-flow: column;
-            flex-flow: column;
+    -ms-flex-flow: column;
+    flex-flow: column;
 }
 
 .lyric-title {
@@ -175,12 +176,11 @@ noscript.tip-overlay {
     color: #eee;
 }
 
-
 .lyric-text {
     -webkit-box-flex: 1;
     -webkit-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    -ms-flex: 1;
+    flex: 1;
     position: relative;
     text-align: center;
 }
@@ -195,31 +195,55 @@ noscript.tip-overlay {
 
 .lyric-text > p.currentLrc {
     -webkit-animation-name: moveLrc;
-            animation-name: moveLrc;
+    animation-name: moveLrc;
     -webkit-animation-timing-function: linear;
-            animation-timing-function: linear;
+    animation-timing-function: linear;
 }
 
 @-webkit-keyframes moveLrc {
-    0%   { -webkit-transform: translateY(18vh); transform: translateY(18vh); opacity: 0;}
-    30%  { opacity: 1;}
-    70%  { opacity: 1;}
-    100% { -webkit-transform: translateY(-30vh); transform: translateY(-30vh); opacity: 0;}
+    0% {
+        -webkit-transform: translateY(18vh);
+        transform: translateY(18vh);
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: translateY(-30vh);
+        transform: translateY(-30vh);
+        opacity: 0;
+    }
 }
 
 @keyframes moveLrc {
-    0%   { -webkit-transform: translateY(18vh); transform: translateY(18vh); opacity: 0;}
-    30%  { opacity: 1;}
-    70%  { opacity: 1;}
-    100% { -webkit-transform: translateY(-30vh); transform: translateY(-30vh); opacity: 0;}
+    0% {
+        -webkit-transform: translateY(18vh);
+        transform: translateY(18vh);
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: translateY(-30vh);
+        transform: translateY(-30vh);
+        opacity: 0;
+    }
 }
 
 .music-player-controller {
     position: relative;
     -webkit-box-flex: 0;
     -webkit-flex: none;
-        -ms-flex: none;
-            flex: none;
+    -ms-flex: none;
+    flex: none;
     top: 0;
     box-sizing: border-box;
     width: 100%;
@@ -256,8 +280,8 @@ noscript.tip-overlay {
     display: flex;
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
 }
 
 .slide-bar {
@@ -277,7 +301,7 @@ noscript.tip-overlay {
     display: inline-block;
 }
 
-.forward-speed, 
+.forward-speed,
 .backward-speed,
 .current-time,
 .total-time {
@@ -305,7 +329,7 @@ noscript.tip-overlay {
     position: relative;
     -webkit-box-flex: 1;
     -webkit-flex-grow: 1;
-            flex-grow: 1;
+    flex-grow: 1;
     height: 25px;
 }
 
@@ -320,7 +344,7 @@ noscript.tip-overlay {
     border: 0 none;
     background: transparent;
     -webkit-appearance: none;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     z-index: 1;
 }
 
@@ -333,7 +357,7 @@ noscript.tip-overlay {
 }
 
 .progress-indicator::-moz-range-track {
-    background: transparent;    
+    background: transparent;
 }
 
 .progress-indicator::-webkit-slider-thumb {
@@ -387,14 +411,14 @@ noscript.tip-overlay {
     width: 196px;
 }
 
-.forward-speed, 
+.forward-speed,
 .backward-speed {
     line-height: 26px;
     width: 15px;
     visibility: hidden;
 }
 
-.forward-speed::after, 
+.forward-speed::after,
 .backward-speed::after {
     content: "x";
 }
@@ -411,22 +435,22 @@ noscript.tip-overlay {
     margin: 0 10px;
     -webkit-box-flex: 1;
     -webkit-flex-grow: 1;
-            flex-grow: 1;
+    flex-grow: 1;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
 }
 
 .control-panel .buttons.center {
     -webkit-box-pack: center;
     -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
 }
 
 .control-panel .buttons input {
@@ -452,55 +476,65 @@ noscript.tip-overlay {
     cursor: default;
 }
 
-.forward-button 
-{background-position: 0 0;}
+.forward-button {
+    background-position: 0 0;
+}
 
-.play-pause-button[value="play"] 
-{background-position: 0 -26px;}
+.play-pause-button[value="play"] {
+    background-position: 0 -26px;
+}
 
-.play-pause-button[value="pause"] 
-{background-position: 0 -52px;}
+.play-pause-button[value="pause"] {
+    background-position: 0 -52px;
+}
 
-.backward-button 
-{background-position: 0 -78px;}
-
+.backward-button {
+    background-position: 0 -78px;
+}
 
 .music-player-controller:not(.no-touch) .forward-button:active,
-.no-touch .forward-button:hover 
-{background-position: -26px 0;}
+.no-touch .forward-button:hover {
+    background-position: -26px 0;
+}
 
-.music-player-controller:not(.no-touch) .play-pause-button[value="play"]:active, 
-.no-touch .play-pause-button[value="play"]:hover 
-{background-position: -26px -26px;}
+.music-player-controller:not(.no-touch) .play-pause-button[value="play"]:active,
+.no-touch .play-pause-button[value="play"]:hover {
+    background-position: -26px -26px;
+}
 
-.music-player-controller:not(.no-touch) .play-pause-button[value="pause"]:active, 
-.no-touch .play-pause-button[value="pause"]:hover 
-{background-position: -26px -52px;}
+.music-player-controller:not(.no-touch) .play-pause-button[value="pause"]:active,
+.no-touch .play-pause-button[value="pause"]:hover {
+    background-position: -26px -52px;
+}
 
-.music-player-controller:not(.no-touch) .backward-button:active, 
-.no-touch .backward-button:hover 
-{background-position: -26px -78px;}
-
+.music-player-controller:not(.no-touch) .backward-button:active,
+.no-touch .backward-button:hover {
+    background-position: -26px -78px;
+}
 
 .forward-button:disabled,
 .forward-button:disabled:active,
-.forward-button:disabled:hover
-{background-position: -52px 0;}
+.forward-button:disabled:hover {
+    background-position: -52px 0;
+}
 
 .play-pause-button[value="play"]:disabled,
 .play-pause-button[value="play"]:disabled:active,
-.play-pause-button[value="play"]:disabled:hover 
-{background-position: -52px -26px;}
+.play-pause-button[value="play"]:disabled:hover {
+    background-position: -52px -26px;
+}
 
 .play-pause-button[value="pause"]:disabled,
 .play-pause-button[value="pause"]:disabled:active,
-.play-pause-button[value="pause"]:disabled:hover
-{background-position: -52px -52px;}
+.play-pause-button[value="pause"]:disabled:hover {
+    background-position: -52px -52px;
+}
 
 .backward-button:disabled,
 .backward-button:disabled:active,
-.backward-button:disabled:hover
-{background-position: -52px -78px;}
+.backward-button:disabled:hover {
+    background-position: -52px -78px;
+}
 
 .no-backdrop-filter.white {
     background-color: rgba(255, 255, 255, .82);
@@ -531,21 +565,21 @@ noscript.tip-overlay {
         -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
         -webkit-flex-direction: row;
-            -ms-flex-direction: row;
-                flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
     }
 
     .lyric-info {
         width: 140px;
         -webkit-box-flex: 0;
         -webkit-flex: none;
-            -ms-flex: none;
-                flex: none;
+        -ms-flex: none;
+        flex: none;
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
         -webkit-flex-direction: column;
-            -ms-flex-direction: column;
-                flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
         background-color: rgba(0, 0, 0, 0.3);
     }
 
@@ -571,12 +605,12 @@ noscript.tip-overlay {
     .lyric-controller-inner {
         -webkit-box-flex: 1;
         -webkit-flex: 1;
-            -ms-flex: 1;
-                flex: 1;
+        -ms-flex: 1;
+        flex: 1;
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
         -webkit-flex-direction: column;
-            -ms-flex-direction: column;
-                flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
     }
 }

@@ -35,7 +35,7 @@ noscript.tip-overlay {
     height: auto;
     box-sizing: border-box;
     text-align: center;
-    padding: 0em 1em;
+    padding: 0 1em;
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
     position: relative;
@@ -61,6 +61,7 @@ noscript.tip-overlay {
     max-width: 736px;
     min-width: 320px;
     height: 100%;
+    min-height: 320px;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
     overflow: hidden;
@@ -69,7 +70,6 @@ noscript.tip-overlay {
 
 .wrapper-background {
     position: absolute;
-    top: 0;
     height: 120%;
     width: 120%;
     top: -10%;
@@ -79,6 +79,13 @@ noscript.tip-overlay {
     background-size: cover;
     -webkit-filter: blur(10px);
     filter: blur(10px);
+}
+
+@media screen and (min-width: 1020px) {
+    .wrapper-background {
+        -webkit-filter: blur(30px);
+        filter: blur(30px);
+    }
 }
 
 .lyric-controller {
@@ -149,7 +156,6 @@ noscript.tip-overlay {
     display: -ms-flexbox;
     display: flex;
     -webkit-justify-content: space-around;
-        -ms-flex-pack: distribute;
             justify-content: space-around;
     -webkit-flex-flow: column;
         -ms-flex-flow: column;
@@ -224,7 +230,12 @@ noscript.tip-overlay {
 .lyric-info,
 .music-player-controller {
     background-color: rgba(255, 255, 255, 0.3);
-    -webkit-backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+.music-player-controller-inner {
+    max-width: 640px;
+    margin: 0 auto;
 }
 
 .music-player-controller-inner {
@@ -294,7 +305,6 @@ noscript.tip-overlay {
     position: relative;
     -webkit-box-flex: 1;
     -webkit-flex-grow: 1;
-        -ms-flex-positive: 1;
             flex-grow: 1;
     height: 25px;
 }
@@ -401,7 +411,6 @@ noscript.tip-overlay {
     margin: 0 10px;
     -webkit-box-flex: 1;
     -webkit-flex-grow: 1;
-        -ms-flex-positive: 1;
             flex-grow: 1;
     display: -webkit-box;
     display: -webkit-flex;
@@ -444,21 +453,21 @@ noscript.tip-overlay {
 }
 
 .forward-button 
-{background-position: 0px 0px;}
+{background-position: 0 0;}
 
 .play-pause-button[value="play"] 
-{background-position: 0px -26px;}
+{background-position: 0 -26px;}
 
 .play-pause-button[value="pause"] 
-{background-position: 0px -52px;}
+{background-position: 0 -52px;}
 
 .backward-button 
-{background-position: 0px -78px;}
+{background-position: 0 -78px;}
 
 
 .music-player-controller:not(.no-touch) .forward-button:active,
 .no-touch .forward-button:hover 
-{background-position: -26px 0px;}
+{background-position: -26px 0;}
 
 .music-player-controller:not(.no-touch) .play-pause-button[value="play"]:active, 
 .no-touch .play-pause-button[value="play"]:hover 
@@ -476,7 +485,7 @@ noscript.tip-overlay {
 .forward-button:disabled,
 .forward-button:disabled:active,
 .forward-button:disabled:hover
-{background-position: -52px 0px;}
+{background-position: -52px 0;}
 
 .play-pause-button[value="play"]:disabled,
 .play-pause-button[value="play"]:disabled:active,
@@ -571,23 +580,3 @@ noscript.tip-overlay {
                 flex-direction: column;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
